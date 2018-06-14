@@ -1,6 +1,0 @@
-query queryDogs{
-    dogs {
-        id
-        breed
-    }
-}

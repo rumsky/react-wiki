@@ -48,7 +48,7 @@ export const getBreadInfo = (url) => {
         '/base': ['知识管理', '基础知识'],
         '/hardpoint': ['知识管理', '中高级知识'],
         '/performance': ['知识管理', '性能优化'],
-        '/interview': ['知识管理', 'Collection'],
+        '/collection': ['知识管理', 'Collection'],
         '/playground': ['知识管理', 'Playground'],
         '/graphql': ['知识管理', 'GraphQL'],
     }

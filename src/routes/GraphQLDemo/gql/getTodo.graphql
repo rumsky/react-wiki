@@ -1,6 +1,0 @@
-query getTodos {
-    todos {
-        id
-        type
-    }
-}

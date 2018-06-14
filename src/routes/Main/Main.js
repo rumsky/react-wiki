@@ -53,8 +53,19 @@ class Main extends Component {
       <Layout className={styles.layoutHasSider}>
         <SiderMenu />
         <Layout>
-          <Header className={styles.header}>
-            
+        <Header className={styles.header}>
+            <Menu
+              mode="horizontal"
+            >
+              <SubMenu
+                key="1"
+                title={administratorInfo.name}
+                onClick={logout}
+              >
+                <Menu.Item key="2">注销</Menu.Item>
+
+              </SubMenu>
+            </Menu>
           </Header>
           <Tabs hideAdd type="editable-card" activeKey={activeTab.pathname} onChange={this.onTabChange.bind(this)} onEdit={this.onTabEdit.bind(this)}>
             {

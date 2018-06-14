@@ -35,15 +35,12 @@ class SiderMenu extends Component {
             case['/performance', '/performance'].indexOf(location.pathname) !== -1:
                 defaultSelectedKeys = '/performance'
                 break;
-            case['/interview', '/interview'].indexOf(location.pathname) !== -1:
-                defaultSelectedKeys = '/interview'
+            case['/collection', '/collection'].indexOf(location.pathname) !== -1:
+                defaultSelectedKeys = '/collection'
                 break;
             case['/playground', '/playground'].indexOf(location.pathname) !== -1:
                 defaultSelectedKeys = '/playground'
                 break;
-            case['/', '/graphql', '/graphql'].indexOf(location.pathname) !== -1:
-                defaultSelectedKeys = '/graphql'
-                break
         }
 
         return (
@@ -70,14 +67,8 @@ class SiderMenu extends Component {
                         <Menu.Item key="/base">基础知识</Menu.Item>
                         <Menu.Item key="/hardpoint">中高级知识</Menu.Item>
                         <Menu.Item key="/performance">性能优化</Menu.Item>
-                        <Menu.Item key="/interview">Collection</Menu.Item>
+                        <Menu.Item key="/collection">Collection</Menu.Item>
                         <Menu.Item key="/playground">Playground</Menu.Item>
-                    </SubMenu>
-                    <SubMenu
-                        key="技术实践"
-                        title={<span><Icon type="bulb"/><span className="nav-text">技术实践</span></span>}
-                    >
-                        <Menu.Item key="/graphql">GraphQL Demo</Menu.Item>
                     </SubMenu>
                 </Menu>
             </Sider>

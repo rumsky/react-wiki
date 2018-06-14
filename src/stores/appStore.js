@@ -15,10 +15,10 @@ class appStore {
 
     constructor() {
         this.administratorInfo = {
-            name: 'harry',
+            name: 'Alex',
             level: 3
         }
-        this.isLogin = false
+        this.isLogin = sessionStorage.getItem("isLogin")==="1"
         this.collapsed = false
         this.siderMode = 'inline'
         this.loading = false
@@ -55,6 +55,7 @@ class appStore {
             const data = await login(values)
             runInAction(() => {
                 this.isLogin = true
+                sessionStorage.setItem("isLogin","1");
             })
         }
         catch (error) {
@@ -75,6 +76,7 @@ class appStore {
     }
 
     @action.bound logout() {
+        alert(1);
         this.isLogin = false
     }
 

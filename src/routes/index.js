@@ -3,12 +3,16 @@ import Hardpoint from './Hardpoint';
 import Performance from './Performance';
 import Collection from './Collection';
 import Playground from './Playground';
-import GraphQLDemo from './GraphQLDemo';
 const routes = [
     {
         path: '/',
         name: 'base',
         exact: true,
+        component: Base,
+    },
+    {
+        path: '/base',
+        name: 'base',
         component: Base,
     },
     {
@@ -30,12 +34,7 @@ const routes = [
         path: '/playground',
         name: 'playground',
         component: Playground,
-    },
-    {
-        path: '/graphql',
-        name: 'graphql',
-        component: GraphQLDemo,
-    },
+    }
     
 ];
 
