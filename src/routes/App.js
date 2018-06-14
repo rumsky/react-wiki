@@ -2,8 +2,8 @@ import React, {Component} from 'react'
 import {observer, inject} from 'mobx-react'
 import {withRouter} from 'react-router-dom'
 import Bundle from '../components/Common/Bundle'
-import lazyLogin from 'bundle-loader?lazy!../components/Layout/Login'
-import lazyMain from 'bundle-loader?lazy!../components/Layout/Main'
+import lazyLogin from 'bundle-loader?lazy!./Login/Login.js'
+import lazyMain from 'bundle-loader?lazy!./Main/Main.js'
 
 const Login = () => (
     <Bundle load={lazyLogin}>

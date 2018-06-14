@@ -1,0 +1,5 @@
+query Feed($type: FeedType!, $offset: Int, $limit: Int) {
+    feed(type: $type, offset: $offset, limit: $limit) @connection(key: "feed", filter:["type"]) {
+        ...FeedEntry
+    }
+}

@@ -3,7 +3,7 @@ import {Layout} from 'antd'
 import {inject, observer} from 'mobx-react';
 import Completer from './components/Completer'
 @inject('appStore') @observer
-class Interview extends Component {
+class Collection extends Component {
     constructor(props) {
         super(props);
         this.store = this.props.appStore;
@@ -36,4 +36,4 @@ class Interview extends Component {
     }
 }
 
-export default Interview
+export default Collection

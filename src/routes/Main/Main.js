@@ -2,14 +2,8 @@ import React, { Component } from 'react'
 import { observer, inject } from 'mobx-react'
 import { Route, withRouter, Switch } from 'react-router-dom'
 import { Layout, Menu, Breadcrumb, Icon, Tabs } from 'antd'
-import SiderMenu from './SiderMenu'
-import Base from '../Base'
-import PerformanceEdit from '../Performance/PerformanceEdit'
-import Performance from '../Performance'
-import Hardpoint from '../Hardpoint'
-import Interview from '../Interview'
-import Playground from '../Playground'
-import GraphQL from '../GraphQL'
+import SiderMenu from '../../components/Layout/SiderMenu'
+import routes from '../index';
 import { getBreadInfo } from '../../utils'
 import styles from './Main.less'
 
@@ -60,14 +54,7 @@ class Main extends Component {
         <SiderMenu />
         <Layout>
           <Header className={styles.header}>
-            <Menu mode="horizontal" onClick={logout}>
-              <SubMenu
-                key="1"
-                title={administratorInfo.name}
-              >
-                <Menu.Item key="2">注销</Menu.Item>
-              </SubMenu>
-            </Menu>
+            
           </Header>
           <Tabs hideAdd type="editable-card" activeKey={activeTab.pathname} onChange={this.onTabChange.bind(this)} onEdit={this.onTabEdit.bind(this)}>
             {
@@ -80,13 +67,9 @@ class Main extends Component {
                       </Breadcrumb>
                       <div className={styles.content}>
                         <Switch>
-                          <Route exact path="/" component={Base} />
-                          <Route path="/base" component={Base} />
-                          <Route path="/hardpoint" component={Hardpoint} />
-                          <Route path="/performance" component={Performance} />
-                          <Route path="/interview" component={Interview} />
-                          <Route path="/playground" component={Playground} />
-                          <Route path="/graphql" component={GraphQL} />
+                          {
+                            routes.map(route =>  <Route key={route.name} {...route} />)
+                          }
                           <Route render={() => <h1 className={styles.noMatch}>找不到此页面</h1>} />
                         </Switch>
                       </div>

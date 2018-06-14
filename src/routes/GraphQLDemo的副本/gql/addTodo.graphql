@@ -1,0 +1,6 @@
+mutation addTodo($type: String!) {
+    addTodo(type: $type) {
+        id
+        type
+    }
+}

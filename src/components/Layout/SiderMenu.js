@@ -26,7 +26,7 @@ class SiderMenu extends Component {
 
         let defaultSelectedKeys = ''
         switch (true) {
-            case['/', '/base'].indexOf(location.pathname) !== -1:
+            case['/base'].indexOf(location.pathname) !== -1:
                 defaultSelectedKeys = '/base'
                 break
             case['/hardpoint', '/hardpoint'].indexOf(location.pathname) !== -1:
@@ -41,7 +41,7 @@ class SiderMenu extends Component {
             case['/playground', '/playground'].indexOf(location.pathname) !== -1:
                 defaultSelectedKeys = '/playground'
                 break;
-            case['/graphql', '/graphql'].indexOf(location.pathname) !== -1:
+            case['/', '/graphql', '/graphql'].indexOf(location.pathname) !== -1:
                 defaultSelectedKeys = '/graphql'
                 break
         }
@@ -72,7 +72,12 @@ class SiderMenu extends Component {
                         <Menu.Item key="/performance">性能优化</Menu.Item>
                         <Menu.Item key="/interview">Collection</Menu.Item>
                         <Menu.Item key="/playground">Playground</Menu.Item>
-                        <Menu.Item key="/graphql">GraphQL</Menu.Item>
+                    </SubMenu>
+                    <SubMenu
+                        key="技术实践"
+                        title={<span><Icon type="bulb"/><span className="nav-text">技术实践</span></span>}
+                    >
+                        <Menu.Item key="/graphql">GraphQL Demo</Menu.Item>
                     </SubMenu>
                 </Menu>
             </Sider>

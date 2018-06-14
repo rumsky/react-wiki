@@ -80,7 +80,7 @@ module.exports = {
       }
     }),
     new HtmlWebpackPlugin({//自动生成html
-      template: './src/views/index.html'
+      template: './src/routes/index.html'
     }),
     new ExtractTextPlugin({
       filename: (getPath) => {
